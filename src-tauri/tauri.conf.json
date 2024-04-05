@@ -11,23 +11,35 @@
   },
   "tauri": {
     "allowlist": {
-      "all": false,
+      "all": true,
+      "protocol": {
+        "asset": true,
+        "assetScope": ["**"]
+      },
       "shell": {
         "all": false,
         "open": true
+      },
+      "window" : {
+        "all" : true,
+        "create" : true
       }
     },
+    "macOSPrivateApi" : true,
     "windows": [
       {
         "title": "tauri-react-player",
         "label" : "main",
         "theme" : "Dark",
+        "transparent" : true,
         "width": 800,
         "height": 600
       },
       {
         "title": "test",
         "label" : "sub",
+        "hiddenTitle" : true,
+        "transparent" : true,
         "url" : "https://github.com/polyacetal",
         "width": 800,
         "height": 600
